@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Diana Allar for President">
+    <meta property="og:description" content="A Better America is possible.">
+    <meta property="og:image" content="https://dianallar.github.io/senate/assets/Diana-2000.jpg>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dianallar.github.io/president/">
+    <title>Diana Allar for President</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        /* Hero text animations */
+        .hero-text-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        
+        .hero-text-container {
+            position: relative;
+            text-align: right;
+            padding-right: 40px;
+        }
+        
+        .hero-text-line {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: #99c6cd;
+        }
+        
+        .hero-animation-text {
+            opacity: 0;
+            transform: translateY(60px);
+            animation: shootUp 0.7s cubic-bezier(.4,1.6,.6,1) forwards;
+            color: white;
+            text-align: right;
+        }
+        
+        @keyframes shootUp {
+            0% { opacity: 0; transform: translateY(60px); }
+            80% { opacity: 1; }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hero-animation-text:nth-of-type(1) { animation-delay: 0.5s; }
+        .hero-animation-text:nth-of-type(2) { animation-delay: 0.8s; }
+        .hero-animation-text:nth-of-type(3) { animation-delay: 1.1s; }
+        .hero-animation-text:nth-of-type(4) { animation-delay: 1.4s; }
+
+        /* Updated Polaroid collage styles */
+        .polaroid-collage {
+            position: absolute;
+            left: 8%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 42%;
+            height: 75vh;
+            z-index: 1;
+        }
+        
+        .polaroid {
+            position: absolute;
+            background: white;
+            padding: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            border-radius: 3px;
+            width: 160px;
+            transition: transform 0.3s ease;
+            opacity: 0;
+            animation: tumbleIn 0.8s ease-out forwards;
+            animation-delay: var(--delay);
+        }
+
+        .polaroid::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+        }
+
+        /* Updated polaroid positions with more spread and rotation */
+        .polaroid:nth-child(1) { left: -5%; top: 5%; transform: rotate(-15deg); z-index: 1; }
+        .polaroid:nth-child(2) { left: 25%; top: 0%; transform: rotate(12deg); z-index: 2; }
+        .polaroid:nth-child(3) { left: 0%; top: 25%; transform: rotate(-8deg); z-index: 3; }
+        .polaroid:nth-child(4) { left: 35%; top: 20%; transform: rotate(14deg); z-index: 4; }
+        .polaroid:nth-child(5) { left: -8%; top: 45%; transform: rotate(-18deg); z-index: 5; }
+        .polaroid:nth-child(6) { left: 40%; top: 40%; transform: rotate(9deg); z-index: 6; }
+        .polaroid:nth-child(7) { left: 10%; top: 60%; transform: rotate(-13deg); z-index: 7; }
+        .polaroid:nth-child(8) { left: 45%; top: 65%; transform: rotate(16deg); z-index: 8; }
+        .polaroid:nth-child(9) { left: 25%; top: 75%; transform: rotate(-11deg); z-index: 9; }
+
+        @keyframes tumbleIn {
+            0% {
+                opacity: 0;
+                transform: translate(-120px, 120px) rotate(-60deg);
+            }
+            100% {
+                opacity: 1;
+                transform: rotate(var(--rotation, 0deg));
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .polaroid-collage {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="#" class="nav-link active">Home</a>
+            <a href="experience.html" class="nav-link">Accomplishments</a>
+            <a href="domestic.html" class="nav-link">Domestic Policy</a>
+            <a href="economic.html" class="nav-link">Economic Policy</a>
+            <a href="rallies.html" class="nav-link">Rallies</a>
+            <a href="foreign.html" class="nav-link">Foreign Policy</a>
+        </div>
+        <div class="navbar-right">
+            <form class="nav-search">
+                <input type="text" placeholder="Search..." aria-label="Search">
+            </form>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="polaroid-collage">
+            <div class="polaroid" style="--delay: 0.2s;">
+                <img src="styles/portland.jpg" alt="Portland">
+            </div>
+            <div class="polaroid" style="--delay: 0.4s;">
+                <img src="styles/phoenix.jpg" alt="Phoenix">
+            </div>
+            <div class="polaroid" style="--delay: 0.6s;">
+                <img src="styles/saltlakecity.jpg" alt="Salt Lake City">
+            </div>
+            <div class="polaroid" style="--delay: 0.8s;">
+                <img src="styles/transportationheader.jpg" alt="Transportation">
+            </div>
+            <div class="polaroid" style="--delay: 1s;">
+                <img src="styles/laborandworkforce.jpg" alt="Labor">
+            </div>
+            <div class="polaroid" style="--delay: 1.2s;">
+                <img src="styles/indexheader.jpg" alt="America">
+            </div>
+            <div class="polaroid" style="--delay: 1.4s;">
+                <img src="styles/immigrationheader.jpg" alt="Immigration">
+            </div>
+            <div class="polaroid" style="--delay: 1.6s;">
+                <img src="styles/housingheader.webp" alt="Housing">
+            </div>
+            <div class="polaroid" style="--delay: 1.8s;">
+                <img src="styles/economyheader.jpeg" alt="Economy">
+            </div>
+        </div>
+
+        <div class="hero-text-wrapper">
+            <div class="hero-text-container">
+                <div class="hero-text-line"></div>
+                <h1 class="hero-animation-text">A</h1>
+                <h1 class="hero-animation-text">Better</h1>
+                <h1 class="hero-animation-text">America</h1>
+                <h1 class="hero-animation-text">is possible.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="campaign-video">
+            <div class="container">
+                <video controls poster="assets/video-poster.jpg">
+                    <source src="assets/We Are America..mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <h2>Meet Diana</h2>
+                <p>My name is Governor Diana Allar, and I'm running for President to ensure that America can remain strong, happy, healthy, and prosperous. As a Senator some time ago, I introduced and passed the AmeriCare Act, which brought health insurance to millions of previously uninsured Americans and made healthcare a lesser worry for the many. As President, I will continue to fight for accessible and affordable healthcare for all.</p>
+                <p>As the three-term incumbent Governor of Montana, I have made numerous strides to protect the people and turn Montana into a prosperous bastion, perfect for work, recreation, and life. I've outlawed plot zoning, banned gerrymandering and mid-decade redistricting, and implemented policies to support affordable housing. I've banned Non-Compete Agreements and Harmful NDAS, raised the minimum wage, and fought for workers' rights. I've banned manditory arbitration clauses, installed LGBT Housing and Employment protections, and made Montana an all-around better place to live for everyone. Some other policy accomplishments include making it easier for businesses to set up shop in cities like Missoula and Billings, and expanding abortion access to 18 weeks with exceptions.</p>
+                <p>I have been serving the people in government for decades, all across this great nation. I believe that, right now, America needs a proven leader who can get things done and <i>has</i> gotten things done. That's why I'm running for President. With your support, we can ensure that America remains prosperous, worker-friendly, economically stable, technologically advanced, healthy, happy, strong, and of ample infrastructure (social, cultural, economic, and physical) for years to come.</p>
+                <p>This fight will be long and hard. We need your support to make it happen. Crawling back from such a disastrous administration will require a tough fight, and we can't do that without your help. <b>A better America is possible.</b> So, let's make it happen. I'm joined in this fight by my lovely husband, my three kids, and my pet dog, Gerald. My lovely campaign manager Empress, too! You should join them in supporting our movement, to ensure a better future for all Americans.</p>
+            </div>
+            <div class="about-image"></div>
+        </section>
+
+        <section class="issues-section">
+            <div class="container">
+                <h2>Key Issues</h2>
+                <div class="issues-grid">
+                    <div class="issue-card">
+                        <h3>Universal Workers' Bill of Rights</h3>
+                        <p>Ensuring that Americans are treated fairly by those who pay us to do the good work we do.</p>
+                    </div>
+                    <div class="issue-card">
+                        <h3>Universal Preschool</h3>
+                        <p>Ensuring every American has access to preschool education for their child, rural and urban alike.</p>
+                    </div>
+                    <div class="issue-card">
+                        <h3>Windfall Profit Redistribution</h3>
+                        <p>Taking the money that gets hoarded by the profiteers of essential industries and redistributing it to be used in programs to make this country great.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Get Involved</h2>
+                <p>Join our movement for a better America. Sign up for updates, volunteer, or attend an event!</p>
+                <a href="#" class="btn btn-primary">Sign Up</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2056 Diana Allar for President. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Intersection Observer for scroll animations
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        fadeElements.forEach(el => observer.observe(el));
+    });
+    </script>
+</body>
+</html>
