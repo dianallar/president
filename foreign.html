@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Foreign Policy | Diana Allar for Pacifica">
+    <meta property="og:description" content="A principled, pragmatic, and Pacifican approach to the world stage.">
+    <meta property="og:image" content="https://dianallar.github.io/senate/styles/pacificawhole.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dianallar.github.io/senate/foreign.html">
+    <title>Foreign Policy | Diana Allar for Pacifica</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+<div class="coming-soon-overlay">
+    <div class="coming-soon-sticker">Coming Soon</div>
+</div>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="nav-home">Home</a>
+            <a href="experience.html" class="nav-accomplishments">Accomplishments</a>
+            <a href="domestic.html" class="nav-accomplishments">Domestic Policy</a>
+            <a href="economic.html" class="nav-accomplishments">Economic Policy</a>
+            <a href="rallies.html" class="nav-accomplishments">Rallies</a>
+            <a href="foreign.html" class="nav-accomplishments active">Foreign Policy</a>
+        </div>
+        <div class="navbar-right">
+            <form class="nav-search">
+                <input type="text" placeholder="Search…" aria-label="Search">
+            </form>
+        </div>
+    </nav>
+
+    <header class="hero" style="background: url('styles/foreignheader.jpg') center/cover no-repeat;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="styles/pacificawhole.svg" alt="Pacifica Map" class="hero-svg">
+            <div class="hero-text">
+                <h1>Foreign Policy</h1>
+                <p class="hero-tagline">A principled, pragmatic, and Pacifican approach to the world stage.</p>
+            </div>
+        </div>  
+    </header>
+    
+    <main class="domestic-main">
+        <section class="policy-accordion">
+            <div class="policy-item blue-bg">
+                <button class="policy-toggle">
+                    <span class="policy-title">America’s Role in the World</span>
+                    <span class="policy-arrow">&#9662;</span>
+                </button>
+                <div class="policy-content" style="position:relative;">
+                    <div class="policy-image" style="background-image: url('styles/foreignrole.jpg');"></div>
+                    <div class="policy-bio">
+                        <h3>“Diplomacy first, strength always.”</h3>
+                        <p>Our foreign policy must reflect our values—democracy, human rights, and peace—while protecting Pacifican interests at home and abroad. We will lead with principle, partner with allies, and never shy away from defending freedom.</p>
+                    </div>
+                    <div class="coming-soon-overlay">
+                        <div class="coming-soon-sticker">Coming Soon</div>
+                    </div>
+                </div>
+            </div>
+            <div class="policy-item white-bg">
+                <button class="policy-toggle">
+                    <span class="policy-title">NATO & Europe</span>
+                    <span class="policy-arrow">&#9662;</span>
+                </button>
+                <div class="policy-content" style="position:relative;">
+                    <div class="policy-image" style="background-image: url('styles/alliances.jpg');"></div>
+                    <div class="policy-bio">
+                        <h3>“Stronger together, safer together.”</h3>
+                        <p>We will revitalize our alliances, invest in global cooperation, and build new partnerships to tackle 21st-century challenges—from climate change to cyber threats.</p>
+                    </div>
+                    <div class="coming-soon-overlay">
+                        <div class="coming-soon-sticker">Coming Soon</div>
+                    </div>
+                </div>
+            </div>
+            <div class="policy-item blue-bg">
+                <button class="policy-toggle">
+                    <span class="policy-title">IPTO, Asia, & China</span>
+                    <span class="policy-arrow">&#9662;</span>
+                </button>
+                <div class="policy-content" style="position:relative;">
+                    <div class="policy-image" style="background-image: url('styles/humanrights.jpg');"></div>
+                    <div class="policy-bio">
+                        <h3>“Freedom is our foundation.”</h3>
+                        <p>America must be a beacon for liberty and justice. We will support democratic movements, defend human rights, and stand up to authoritarianism wherever it arises.</p>
+                    </div>
+                    <div class="coming-soon-overlay">
+                        <div class="coming-soon-sticker">Coming Soon</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+    document.querySelectorAll('.policy-toggle').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const item = this.closest('.policy-item');
+            // Close all others
+            document.querySelectorAll('.policy-item').forEach(i => {
+                if(i !== item) i.classList.remove('active');
+            });
+            // Toggle this one
+            item.classList.toggle('active');
+        });
+    });
+    </script>
+</body>
+</html>
