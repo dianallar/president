@@ -14,22 +14,76 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <style>
-  body {
-    overflow-x: hidden;
-  }
+
+.hero {
+    position: relative;
+    height: 80vh;
+    min-height: 600px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.1;
+    color: #fff;
+}
+
+.hero-tagline {
+    font-size: 2rem;
+    margin-top: 1rem;
+    opacity: 0.9;
+    color: #fff;
+}
+
 </style>
 <body>
-<div class="coming-soon-overlay">
-    <div class="coming-soon-sticker">Coming Soon</div>
-</div>
     <nav class="navbar">
         <div class="navbar-left">
-            <a href="index.html" class="nav-home">Home</a>
-            <a href="experience.html" class="nav-accomplishments">Accomplishments</a>
-            <a href="domestic.html" class="nav-accomplishments active">Domestic Policy</a>
-            <a href="economic.html" class="nav-accomplishments">Economic Policy</a>
-            <a href="rallies.html" class="nav-accomplishments">Rallies</a>
-            <a href="foreign.html" class="nav-accomplishments">Foreign Policy</a>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="experience.html" class="nav-link">Accomplishments</a>
+            <a href="domestic.html" class="nav-link active">Domestic Policy</a>
+            <a href="economic.html" class="nav-link">Economic Policy</a>
+            <a href="rallies.html" class="nav-link">Rallies</a>
+            <a href="foreign.html" class="nav-link">Foreign Policy</a>
         </div>
         <div class="navbar-right">
             <form class="nav-search">
@@ -38,399 +92,251 @@
         </div>
     </nav>
 
-            <header class="hero" style="background: url('styles/domesticheader.jpg') center/cover no-repeat;">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <img src="styles/pacificawhole.svg" alt="Pacifica Map" class="hero-svg">
-                <div class="hero-text">
-                    <h1>Domestic Policy</h1>
-                    <p class="hero-tagline">Building a Pacifica that works for all; From the ground, up.</p>
+    <header class="hero">
+        <div class="hero-bg" style="background-image: url('styles/domesticheader.jpg')"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1><b>Domestic Policy</b></h1>
+                <p class="hero-tagline">Building an America that works for all; From the ground, up.</p>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="main-content">
+    <section class="issues-section">
+        <div class="container">
+            <h2>Domestic Policy Platform</h2>
+            <div class="issues-grid">
+                <div class="issue-card">
+                    <h3>1. Worker's Bill of Rights</h3>
+                    <p>Our workers are the backbone of this nation and all that it stands for. We need a premier standard of labor to supplement their continued efforts. The most important thing we can guarantee is a fairer standard of work, which is why, as Governor of Montana, I signed legislation to ban mandatory arbitration, implemented a right to disconnect from workplace communications outside of working hours, a ban on forcing non-disclosure agreements to cover up poor workplace conduct, and increased the minimum wage.</p>
+                    <p>We need to implement these policies - And go further - At the federal level. They've worked in Montana. It's time to ensure that every worker has predictable scheduling, the right to collective bargaining, a fair wage, proper workplace conduct, and aren't pressured into signing contracts to protect a company by their superiors. I am proud to support the American workforce as they keep this country great, from the rust belt cities of Michigan and Wisconsin to agricultural workers in California and Kansas.</p>
                 </div>
-            </div>  
-        </header>
+                
+                <div class="issue-card">
+                    <h3>2. Universal Preschool</h3>
+                    <p>Raising a child shouldn't be a struggle. An Allar Administration would support new parents by making it easier for Americans to access an early, inexpensive, educational standard of childcare for their kids. Education shouldn’t be a privilege that starts at five, it’s a right that begins at three. Our Universal Preschool plan will:</p>
+                        <li>
+                            Provide free, high-quality pre-K for every child, staffed by well-paid educators with accredited curricula.
+                        </li>
+                        <li>
+                            Partner with existing childcare centers and public schools to scale quickly, prioritizing underserved areas first.
+                        </li>
+                        <li>
+                            Include wraparound services like nutrition programs and developmental screenings to set kids up for success.
+                        </li>
+                    </p>
+                    <p>Study after study shows preschool pays for itself: It boosts graduation rates, reduces future special education costs, makes employment and college graduation likelier later on, improves social motor skills for those who have attended preschool and are entering grade school, and delivers $7-$12 in long-term benefits for every $1 invested. We’ll fund this through the Windfall Tax (See: Economic Policy).</p>
 
-        <main class="domestic-main">
-    <section class="policy-accordion">
-        <div class="policy-item blue-bg">
-            <button class="policy-toggle">
-                <span class="policy-title">Women's Rights</span>
-                <span class="policy-arrow">&#9662;</span>
-            </button>
-            <div class="policy-content">
-                <div class="policy-image" style="background-image: url('styles/womensrights.jpg');"></div>
-                <div class="policy-bio">
-                    <h3>“Empowered women empower nations.”</h3>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>3. Reproductive Freedom</h3>
+                    <p>Abortion is healthcare. Period. It's a choice that any pregnant woman should be able to make for herself. We’ll do what President Schuyler didn't and codify the right to choose nationwide, increasing from the 18-week nationwide minimum with legislation that:
+                        <li>
+                        Protects abortion access until and after fetal viability (and beyond for health risks), with no forced waiting periods or medically unnecessary restrictions. You aren't truly pro choice if you don't support the choice at any point in time, abandoning the principle at an arbitrary point chosen by the government.
+                        </li>
+                        <li>
+                        Shields providers and patients from violence by making planned parenthoods gun-free zones, and
+                        </li>
+                        <li>
+                        Expands Medicaid coverage for reproductive care, including contraception and IVF, because freedom means access, not just legal technicality.
+                        </li>
+                    </p>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>4. National Parks in Every State</h3>
+                    <p>Nature is one of America's most vital assets. From the beautiful forests and mountains of Appalachia to the redwoods of California to the Everglades of Florida, America's public lands are its common heritage. Yet, ~20 states lack a national park. Here's a promise: by the end of an Allar Administration, there will be one national park in every state. Here are some primary targets:
+                        <li>
+                        👉 Adirondack Mountains, New York
+                        </li>
+                        <li>
+                        👉 Okefenokee Swamp, Georgia
+                        </li>
+                        <li>
+                        👉 Ancient Mounds, Ohio
+                        </li>
+                    </p>
+                    <p>We also need to ensure that we are conserving these lands instead of actively destroying them. An Allar Administration will ban new drilling and mining licenses on public lands and divest federal funding towards cleaning up polluted areas in national and state parks alike, such as the Delaware Water Gap National Recreation Area.</p>
 
-                    <p>For decades, women have fought for the right to control our own bodies, but today, those freedoms are under siege. As a mother, a survivor, and someone who has had an abortion before, I know firsthand how deeply personal these decisions are. No politician should ever dictate what Pacifican women do with their bodies.</p>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>5. Infrastructure for People, Not Cars</h3>
+                    <p>Our Complete Streets Initiative will redesign roads to prioritize walking, biking, and transit; Saving lives, cutting emissions, and reconnecting communities. We’ll:
+                        <ul>
+                            <li>Mandate sidewalks, bike lanes, and bus/streetcar lanes in all federally funded projects.</li>
+                            <li>Spend federal money on redesigning hundreds of thousands of road miles to be suitable for walking, biking, and busing.</li>
+                            <li>Replace every lead pipe in America within 5 years, using emergency funds and union labor, because clean water isn’t negotiable. In what is, with no doubt, the greatest nation on the face of this planet, no person should have unsafe drinking water.</li>
+                        </ul>
+                    </p>
+                    <p>Meanwhile, our Public Transit Expansion will:</p>
+                        <ul>
+                            <li>Triple funding for light rail and electric buses, with free fares for low-income riders.</li>
+                            <li>Restore Amtrak routes gutted since the 1970s, focusing on "flyover country" first.</li>
+                            <li>Hopefully, collaborate with countries across North and South America to begin development of a hemispheric regional connector network.</li>
+                        </ul>
+                    </p>
+                    <p>The average household spends $10,000/year on car ownership—It's time to give ourselves better options, because we deserve better.</p>
 
-                    <h3>As your Senator, I will:</h3>
-                    <ul>
-                    <li><b>Codify Roe v. Wade's protections</b> into the constitution, guaranteeing abortion access nationwide.</li>
-                    <li><b>Eliminate taxes</b> on menstrual products, contraception, and prenatal care, because basic healthcare and the means to make your own decisions are not luxuries, or, at the very least, they should not be, in the greatest nation on the face of the planet.</li>
-                    <li><b>Expand the Violence Against Women Act</b> to include LGBTQ+ survivors and fund rape crisis centers in every state.</li>
-                    </ul>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>6. Better Park Planning</h3>
+                   <p>Everyone loves parks! We have so many beautiful plots of land in various locations in the United States, and while the scenery is phenomenal on its own, parks should be far more than just land plots, and there should be a lot more of them. Under an Allar Administration, we will: 
+                        <ul>
+                            <li>Establish a bureau of recreational planning, to partner with state governments and create a better standard for our parks, their preservation, and their purpose;</li>
+                            <li>Begin funding the creation of more recreational centers, independent restaurants, and bookstores/libraries in parks;</li>
+                            <li>Use conjoined abandoned lots acquired by eminent domain or unused federal land to construct new parks.</li>
+                        </ul>
+                    </p>
+                    <p>There's nothing more relaxing than looking out on Maggie Valley, North Carolina with a cup of coffee and a book in hand. We'll make this a feasible reality for every American.</p>
 
-                    <p>This fight does not stop at a woman's right to choose and make her own medical decisions. <i>It's also about justice:</i></p>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>7. Bureau of American Expression</h3>
+                    <p>One of the most important pillars of American society is its emphasis on multicultural expression. Arts, music, theater, traditional clothing, literature, whatever it may be, it's important to us as a country to celebrate the various cultures that have come together and melted down in one big pot. Unfortunately, as society becomes more homogenic, and many cultures are shunned, we may lose sight on one of the most important facets of America: its culture, or, instead, its lack thereof. America's vast variety of cultures is one of its most important features. We need to protect this. An Allar Administration will:
 
-                    <p><b>Pay equity.</b> Women still earn 82 cents for every dollar men make—and it's worse for Black, Latina, and Native women. We'll enforce equal pay laws and fine corporations that discriminate.</p>
+                        <ul>
+                            <li>Establish a bureau of American Expression, Arts, Entertainment, and Culture, for the promotion and preservation of various cultural activities across the United States;</li>
+                            <li>Divert federal funding towards the establishment of more Arts Centers in urban areas, including but not limited to: Chicago, San Francisco, Charlotte, New York City, the District of Columbia and Philadelphia;</li>
+                            <li>Promote engagement in local activities such as music festivals, movie screenings, school plays, poetry nights, and book clubs.</li>
+                        </ul>
+                    </p>
+                    <p>One thing that is important equally to every person in this country is their idea of culture. What they hold true to them and what they believe constitutes their cultural identity. An Allar Administration will support and defend the liberal arts, indigenous cultures, BIPOC cultures, and any others, as they all matter just the same in building the type of network we have here in the United States.</p>
 
-                    <p><b>Parental support.</b> Universal childcare. Paid family leave. Protections for pregnant workers. No one should have to choose between their job and their family.</p>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>8. Federal 15% Wage Subsidies For Teachers</h3>
+                    <p>Teachers give their all to this nation and its children, it's time to start giving back. Teachers are the backbone of this nation's education system. It's unfair that they are subjected to poor working conditions out of their own fruition and we expect them to just keep providing for us while we use them for their labor. Let's stop treating teachers as though they are expendable and actually pay them what they are worth.</p>
+                    <p>Under an Allar Administration, the federal government will implement a permanent 15% wage subsidy for all public K–12 teachers, ensuring their salaries reflect the value of their work and helping states compete for high-quality educators. This wage boost will be funded directly from federal revenues, bypassing state budget bottlenecks that have historically kept teacher pay stagnant. In addition, teachers with federal student loans will receive full forgiveness after five years of public school service, retroactive to current educators. These measures aim to reverse the teacher shortage crisis, increase retention, and recognize the essential role of educators in maintaining a strong democracy.</p>
 
-                    <p><b>Bodily sovereignty.</b> Ban forced sterilizations of disabled and incarcerated women. End the tampon tax. Prosecute domestic abusers to the fullest extent of the law—no exceptions.</p>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>9. Codification of the Equal Rights Amendment</h3>
+                    <p>It's time to win the fight for women's rights. The Equal Rights Amendment made it through the penultimate stage of ratification in 1972, and yet we have yet to see it in our constitution about 83 years later. This is an unacceptable injustice for our vast community of strong, capable women all across America who have been fighting for equal representation amongst our society's social network for hundreds of years.</p>
+                    <p>Under an Allar Administration the Equal Rights Amendment, which guarantees equality of rights under the law regardless of sex, will be formally codified into the U.S. Constitution. We will work with Congress to remove procedural roadblocks, recognize its ratification by the states, and enshrine it in federal law. Once codified, the ERA will serve as a permanent legal safeguard against discrimination on the basis of sex or gender identity, providing a stronger foundation for court rulings and federal protections in employment, housing, education, and public life.</p>
 
-                    <p>Republicans want to drag us back to the 1950s. <b>We won't let them.</b> Together, we'll build a future where every woman, cis or trans, has the freedom to thrive.</p></p>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>10. Sensible Immigration Reform</h3>
+                    <p>The concept of Immigration is the backbone of America and has been for hundreds of years. People have come from near, far, or wherever they are to experience the American dream and take part in the New World Project. There is no reason to shun those who wish to come to America to experience the same and contribute meaningfully to our vast, beautiful society. Of course, the process of immigration must be legal on the part of immigrants, but it also must be humane, responsible on our part, and accessible. People from all across the world should be encouraged to come to the United States, live their lives, and raise their families.</p>
+                    <p>Our immigration policy will prioritize both compassion and economic need. Dreamers, agricultural workers, and other essential laborers will be granted immediate legal status, with an eight-year pathway to citizenship for all undocumented residents who pass security checks and meet work or educational requirements. A vocational fast-track will streamline legal immigration for in-demand trades and skilled labor. Border security will be enhanced through modern surveillance and technology, replacing ineffective and harmful physical barriers; the unfinished wall will be dismantled. A federal Anti-Cartel Task Force will target criminal smuggling networks, while ICE workplace raids, often disruptive, violent and unjust, will be banned. The program will expand H-2B visas for seasonal work and create whistleblower visas for those exposing exploitation or corruption. We are also going to suspend the immediate removal of undocumented immigrants from the country upon discovery and subject them to extensive background checking before discerning whether or not they may continue to reside in the United States and engage in the eight-year PTC.
+
+                </div>
+                
+                <div class="issue-card">
+                    <h3>11. Ban Home Ownership Associations</h3>
+                    <p>HOAs too often function as unaccountable private governments, imposing restrictive rules, levying excessive fines, and displacing residents. We will abolish all HOAs’ legal authority to regulate private property beyond basic municipal code, effectively eliminating them as governing entities. Existing HOA-controlled developments will transition to resident-led neighborhood associations without legal enforcement powers. This will protect property rights, prevent abuse, and restore democratic accountability to local governance.</p>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>12. Repeal the National Railroad Privatization Law</h3>
+                    <p>Rail infrastructure is a public good and should be managed for the benefit of communities, not private shareholders. Under an Allar Administration, we will repeal the federal law that allowed privatization of major freight and passenger rail assets, restoring public control over key routes and infrastructure. Re-nationalized rail operations will prioritize safety, environmental sustainability, and expanded passenger service, particularly hemispheric high-speed and regional commuter lines, while ensuring freight transport remains efficient and affordable for U.S. industry.</p>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>13. Repeal NH-Budd Welfare Reform Act Section 4</h3>
+                    <p>In no world should a young mother be isolated from her community by her government. Disallowing young mothers from taking breaks from school to take care of a baby that the Republicans wish to force upon them is not only hypocritical and antithetical to the purpose of being "pro-life", but it also will lead to these children the Republicans claim to care about to face harsh societal conditions as a result of the mothers opting to take care of their child before all other priorities - Which is what the Republicans claim they want the mother to do.</p>
+                    <p>A Rumper Administration will support and defend NH-Budd, as they've said in their platform. An Allar Administration won't, because a woman's right to choose to raise <b>her</b> child, pursue <b>her</b> education, or terminate <b>her</b> pregnancy should not determine <b>her</b> benefits eligibility. As President, Diana Allar will repeal Section 4 of the NH-Budd Welfare Reform Act and stop letting the Republicans punish women for doing what the Republicans want them to do. It's time to stop letting hypocritical, manufactured issues control the way the wind blows in this country.</p>
+
+                </div>
+                
+                <div class="issue-card">
+                    <h3>14. National Use-Of-Force Standard for Police</h3>
+                    <p>We, as a country, have struggled with police brutality plaguing our society for hundreds of years. From the Tulsa Massacre to more individual cases of the senseless murder of black citizens out of an implicit racial prejudice, to the abuse of women in public and in private out of a sense of authority, it's been apparent for a long time that our police force requires reform to carry out its modern purpose: Keeping our country safe at a municipal level.</p>
+                    <p>Under an Allar Administration, we will establish a binding nationwide standard governing the use of force by law enforcement. This standard will prohibit chokeholds, require de-escalation before the use of deadly force, mandate proportionality, and require officers to intervene when witnessing misconduct. Compliance will be tied to federal law enforcement grants, ensuring adoption across all jurisdictions. The standard will also include transparent reporting requirements to track and publicly disclose use-of-force incidents.</p>
+
+                </div>
+                
+                <div class="issue-card">
+                    <h3>15. Ending 1033 Program Transfers</h3>
+                    <p>One of our strongest commitments is that the Pentagon’s 1033 program, which supplies military-grade equipment to civilian police departments, will be terminated. Local police will no longer have access to surplus armored vehicles, grenade launchers, and other battlefield weaponry. Exceptions will only be made for specialized bomb disposal equipment and certain non-lethal tools used for disaster relief. This policy aims to demilitarize policing, reduce the risk of excessive force, and reinforce the principle that communities are not warzones.</p>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>16. Ending Mandatory Minimums for Nonviolent Offenses</h3>
+                    <p>Mandatory minimum sentencing laws for nonviolent offenses, particularly in drug cases, will be repealed under an Allar Administration. Judges will regain discretion to issue sentences proportionate to the circumstances of each case, with a focus on rehabilitation and restorative justice rather than automatic incarceration. This reform will significantly reduce prison overcrowding, lower recidivism, lower taxpayer costs, and address racial disparities in sentencing. Every case is different. It should be treated as such, and it will be. Just look at how well it worked in Montana! Rates of criminal activity are dwindling as our society becomes safer.</p>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>17. Clear The Rape Kit Backlog</h3>
+                    <p>So many people go through the unimaginable horror of having their autonomy forcibly violated every year. Of course, a clogged and often neglected justice system has allowed their kits to stockpile and made it ever so much harder to tangibly investigate their cases. Getting justice for these people is one of the top priorities on our list and will be effected soon after election.</p>
+                    <p>Under an Allar Administration the federal government will fully fund the processing of all untested rape kits in the United States, with strict deadlines and public progress tracking. Grants will be allocated to state and local crime labs to hire staff, modernize equipment, and implement best practices for evidence handling. Survivors will have the right to track their case status, and future backlogs will be prevented through ongoing federal oversight.</p>
+
+                </div>
+                
+                <div class="issue-card">
+                    <h3>18. Protecting LGBTQ Youth in Schools</h3>
+                    <p>One's sexual orientation is a very important component of their identity, and is their journey to embark on as they begin to figure themselves out. While some Republican politicians would like to force children to cough up facets of their identity that they maybe have not fully integrated into their array of characteristics or come to public terms with yet, for one reason or another, thereby endangering children and making them susceptible from abuse by their hypothetically homophobic parents, Governor Allar remains committed to protecting LGBTQ+ Youth from harm.</p>
+                    <p>If elected, Diana Allar's federal government will withhold funding from any public school that requires teachers to disclose a student’s sexual orientation or gender identity to parents or guardians without the student’s consent, unless legally required for safety reasons. This protection will safeguard LGBTQ youth, especially those in unsafe or unsupportive home environments, from harm, homelessness, or abuse. While Governor Allar respects a parent's right to be involved in their child's education, no entity has a right to actively endanger a child for any reason they see fit - Moral, religious, or otherwise.</p>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>19. Increasing Teacher Pay</h3>
+                    <p>While federal wage subsidies and student loan forgiveness are a large step towards ensuring that teachers are fairly compensated and have a larger swath of their financial burden alleviated, there are many more steps to be taken to ameliorate the issue of teachers being chronically underpaid and overworked. One of those steps is an abject, sizable increase of their income.</p>
+                    <p>Beyond the federal wage subsidy, we will encourage states to raise base teacher salaries to a competitive national standard of $30 an hour. Federal matching grants will reward states that meet or exceed this threshold, creating healthy competition to retain talent. Our policy acknowledges that competitive pay is not only fair compensation but also a key driver of educational quality. If teachers are expected to be the arbiters of this nation's future, it is imperative they are treated with the respect they deserve.</p>
+
+                </div>
+                
+                <div class="issue-card">
+                    <h3>20. Increase Funding for the Department of Education</h3>
+                    <p>As increasing the national standard of education has proven to be a priority of this campaign, doing so would not be possible without increasing funding for the department of education to tackle existing shortfalls. Whilst many decry the Department of Education as useless, we say that it has a purpose: Enforcing a national standard of education via monetary resourcing and administering education-related federal programs is just as important as many other departments of a similar caliber.</p>
+                    <p>Under Allar, the Department of Education will receive expanded funding to support state and local initiatives in early childhood education, special education, literacy, STEM development, and vocational training. Investments will also be directed toward rural schools and underserved urban districts, closing achievement gaps and ensuring equitable access to high-quality education nationwide.</p>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>21. Funding Better Literacy Education</h3>
+                    <p>For the better part of fifty years, American society has faced an illiteracy problem. Our children are more invested in pop culture and media frenzies than they are their own education, and it is proving to be a problem for the continued strength of the arts, literature, and sciences. Many authors are told by their publishers to mark their writing down to a fifth grade level to make media easier to consume for the masses. I don't think that's right. I think that we need to divert more funds towards ensuring that our children can read, and that they love to read. I have been a reader my entire life. From the time I was a little girl, reading was my fascination. I particularly enjoyed the works of Charles Dickens.</p>
+                    <p>It shouldn't be a figment of the past for kids to enjoy authors like Charles Dickens. We should have easier access to literary resources in public schools, fund book drives in underserved areas, construct little libraries across the United States, implement free programs to teach illiterate adults English up to a tenth-grade level, and incentivize the curation of better take-home reading lists in grade schools. These are just a few of the many steps we can take to ensure that our population gets back to reading books and engaging in the Arts.</p>
+
+                </div>
+                
+                <div class="issue-card">
+                    <h3>22. Organ Transplantation and Donation Reform</h3>
+                    <p>One of the largest shortfalls in the American medical system is the lack of attention paid to the Organ Transplantation system. The neglect of this system has caused excessive wait listing, the improper care of and subsequent failure of multiple donated organs, and the lack of detail paid to interstate coordination of organ transferal.</p>
+                    <p>Under an Allar Administration, the U.S. organ donation system will be modernized to expand availability, reduce wait times, and improve fairness. Reforms include streamlining donor registration, creating an opt-out default organ donation system under the framework of the AmeriCare Act, strengthening anti-discrimination rules for transplant eligibility, and improving interstate organ sharing coordination. Additional funding will support public awareness campaigns and medical research into organ preservation and artificial organs.</p>
+
+                </div>
+                
+                <div class="issue-card">
+                    <h3>23. Repeal of the Hyde Amendment</h3>
+                    <p>While abortion is a contentious issue, there is zero reason that the federal government should prohibit itself from funding a basic healthcare procedure. Especially coupled with Section 4 of the NH-Budd Welfare Reform Act, which we intend to get rid of, these policies are dangerous and make abortion inequitable for lower-income people who may wish to terminate a pregnancy.</p>
+                    <p>The Hyde Amendment, which prohibits federal funding for most abortions, will be repealed under Allar to ensure that low-income people and those on Medicaid and AmeriCare have equal access to reproductive healthcare. Abortion will be recognized as a standard medical procedure covered under all federally funded healthcare programs, removing financial barriers and ensuring reproductive rights are fully accessible, regardless of income.</p>
+
+                </div>
+                
+                <div class="issue-card">
+                    <h3>24. Mandatory Elder Parole</h3>
+                    <p>Nonviolent elderly inmates no longer pose a risk to society at large. While they may have committed a crime and been a general nuisance in the past, it is imperative that we allow our seniors to retire with dignity.</p>
+                    <p>Under an Allar Administration, federal law will require states and the Bureau of Prisons to provide parole eligibility to incarcerated individuals aged 65 or older who have served at least 15 years, except in cases of specific ongoing public safety risk. Our policy acknowledges declining recidivism rates with age, reduces prison overcrowding, and reallocates resources to rehabilitation and victim services.</p>
+
+                </div>
+                
+                <div class="issue-card">
+                    <h3>25. Legal Self-Identification on Gender</h3>
+                    <p>Charting your own course in life is one of the most important facets of being an American. This includes your gender identity. It is not the government's job to dictate your identity for you, and so we will not any longer.</p>
+                    <p>If Diana Allar is elected President of the United States, every U.S. resident will have the legal right to change their gender marker on government documents through self-identification, without requiring medical documentation or court orders. This change will apply to all federal identification and will set a standard for states to follow, ensuring that trans and nonbinary individuals can navigate life with documentation that reflects their identity, and that this right is not needlessly infringed by the federal government out of a sense of responsibility to engage with the culture war in a disruptive and rude manner.</p>
+
+                </div>
+                
+                <div class="issue-card">
+                    <h3>26. Removing Welfare and AmeriCare Work Requirements</h3>
+                    <p>Under an Allar Administration, work requirements for federal welfare programs, including SNAP, TANF, and Medicaid, will be eliminated. Similarly, income requirements for AmeriCare eligibility that were established under the Dole Administration will be repealed, and AmeriCare will be returned to its intended purpose: A universal, opt-out public health insurance option, as well as a nationally coordinated medical supply chain and federal hospital facility network. Assistance will be based solely on need, not employment status, recognizing that many recipients face barriers such as disability, caregiving responsibilities, or economic downturns. This reform will reduce bureaucratic hurdles, prevent unnecessary loss of benefits, and ensure that welfare programs fulfill their intended role as a safety net.</p>
                 </div>
             </div>
         </div>
-        <div class="policy-item white-bg">
-            <button class="policy-toggle">
-                <span class="policy-title">Education</span>
-                <span class="policy-arrow">&#9662;</span>
-            </button>
-            <div class="policy-content">
-                <div class="policy-image" style="background-image: url('styles/education.webp');"></div>
-                <div class="policy-bio">
-                    <h3>“Education is the passport to the future.”</h3>
-                    <p>Every child in America deserves access to a world-class public education - regardless of their zip code, family income, or background. As a former school counselor and the mother of a public school student, I've seen firsthand how our current system fails too many children. We must invest in our schools, respect our teachers, and prepare students for the future. As Lieutenant Governor of Olympia, I introduced and passed the PUTA Act, which substantially increased the minimum wage for teachers. I'd like to implement a similar policy on the national stage.</p>
-
-                    <h3>As your Senator, I will:</h3>
-
-                    <ul>
-                    <li><b>End the teacher shortage crisis</b> with a 15% federal wage subsidy and student loan forgiveness for educators</li>
-                    <li><b>Fix our broken school funding model</b> by replacing property taxes with federal needs-based funding</li>
-                    <li><b>Guarantee mental health support</b> with at least two counselors per school and universal mental health support cost coverage</li>
-                    <li><b>Make college and trade school debt-free</b> through federal subsidies and income-contingent repayment plans</li>
-                    <li><b>Modernize our curriculum</b> with comprehensive sex education, civics education, renewed geography and geopolitical courses, vocational training, and climate literacy</li>
-                    </ul>
-
-                    <h3>Key Priorities:</h3>
-
-                    <p><b>Early Childhood:</b> Universal pre-K for all 3- and 4-year-olds, with living wages for childcare workers</p>
-
-                    <p><b>K-12 Reform:</b> Smaller class sizes (25:1 max ratio), updated facilities, and free school meals</p>
-
-                    <p><b>Higher Education:</b> Tuition-free community college and expanded Pell Grants</p>
-
-                    <p><b>Vocational Training:</b> Federal partnerships with unions to create apprenticeship pipelines</p>
-
-                    <p>For too long, we've underfunded our schools while overtesting our children. My administration will <i>actually</i> invest in the next generation - because education isn't an expense, it's the foundation of our democracy and our economy.</p>
-                </div>
-            </div>
-        </div>
-        <div class="policy-item blue-bg">
-            <button class="policy-toggle">
-                <span class="policy-title">Labor & Workforce</span>
-                <span class="policy-arrow">&#9662;</span>
-            </button>
-            <div class="policy-content">
-                <div class="policy-image" style="background-image: url('styles/laborandworkforce.jpg');"></div>
-                <div class="policy-bio">
-                    <h3>“Dignity in work, pride in progress.”</h3>
-                    <p>The American labor movement built the middle class - but for decades, corporate interests and Republican politicians have waged war on workers' rights. As the author of the <b>Collective Bargaining Rights Amendment</b>, I'm fighting to enshrine union rights in our Constitution because no worker should have to beg for fair pay and safe conditions.</p>
-                    <h3>My Constitutional Amendment Will:</h3>
-                    <ul>
-                    <li><b>Permanently guarantee</b> the right to unionize and collectively bargain</li>
-                    <li><b>Ban "right-to-work" laws</b> that weaken unions</li>
-                    <li><b>Protect striking workers</b> from retaliation</li>
-                    <li><b>Establish sectoral bargaining</b> so unions can negotiate industry-wide standards</li>
-                    </ul>
-
-                    <p>As President, I signed into law the Right to Disconnect Act, which ensures that workers can disengage from work communications during non-work hours without fear of repercussions. I also signed into law the Employment Mobility and Competition Act, which banned non-compete agreements and non-disclosure agreements focused on assault, and the Industry Finance and Insurance Act, which revitalized domestic investment in manufacturing and provided a support boost for United States Exporters, protecting jobs and strengthening our economy.</p>
-
-                    <h3>As a Senator, these will be my priorities in regards to Labor and the Workforce:</h3>
-
-                    <p><b>Modern Worker Protections:</b>
-                    <br>32-hour workweek • Paid family leave • Mandatory breaks • Predictable scheduling</p>
-
-                    <p><b>Rebuild Union Power:</b>
-                    <br>Card check recognition • First contract arbitration • Ban permanent replacements</p>
-
-                    <p><b>Living Wages:</b>
-                    <br>$25 federal minimum wage for teachers • Equal pay certification • Tip credit elimination</p>
-
-                    <p>From the picket lines to the factory floors, American workers deserve dignity. My platform will <i>finally</i> give American labor the protections it deserves - because when our economy is strong, America is strong.</p>
-                </div>
-            </div>
-        </div>
-        <div class="policy-item white-bg">
-            <button class="policy-toggle">
-                <span class="policy-title">Immigration</span>
-                <span class="policy-arrow">&#9662;</span>
-            </button>
-            <div class="policy-content">
-                <div class="policy-image" style="background-image: url('styles/immigrationheader.jpg');"></div>
-                <div class="policy-bio">
-                    <h3>“America’s strength is found in its diversity.”</h3>
-                    <p>America is a nation of immigrants - but our broken system traps millions in uncertainty while failing to secure our borders. My plan combines compassion with common sense: expanding legal pathways while cracking down on smuggling cartels and employers who exploit undocumented workers. Pacifica is a very diverse state, rich in culture spanning hundreds of years, several communities, nations, and populations. As your Senator, I will work to ensure that all who wish to come to America (hopefully Pacifica!) and call this place their home can do so freely, for everyone should be allowed to partake in the project that is the greatest nation in the world. I plan to prioritize several policies that will make immigration a more humane process, including:</p>
-
-                    <h3>Pathway to Citizenship:</h3>
-                    <ul>
-                    <li><b>Immediate status</b> for Dreamers, farmworkers, and essential workers</li>
-                    <li><b>8-year citizenship path</b> for undocumented immigrants with clean records</li>
-                    <li><b>Vocational fast-track</b>: Earn citizenship through skilled work in high-need areas</li>
-                    </ul>
-
-                    <h3>Border Security & Reform:</h3>
-                    <ul>
-                    <li><b>Triple asylum officers</b> to clear backlog while maintaining due process</li>
-                    <li><b>Smart surveillance</b> with drones and sensors instead of wasteful walls</li>
-                    <li><b>Anti-cartel task force</b> with DEA and international partners</li>
-                    </ul>
-
-                    <h3>Worker Protections:</h3>
-                    <ul>
-                    <li><b>Ban ICE workplace raids</b> that punish workers instead of exploitative employers</li>
-                    <li><b>Expand H-2B visas</b> with union wage requirements</li>
-                    <li><b>Whistleblower visas</b> for workers who report labor violations</li>
-                    </ul>
-
-                    <p>We'll replace chaos with order - welcoming those who follow the rules while holding accountable those who break them. Our plan strengthens America's workforce while finally fixing this unsustainable system.</p>
-                </div>
-            </div>
-        </div>
-        <div class="policy-item blue-bg">
-            <button class="policy-toggle">
-                <span class="policy-title">The Environment</span>
-                <span class="policy-arrow">&#9662;</span>
-            </button>
-            <div class="policy-content">
-                <div class="policy-image" style="background-image: url('styles/environmentheader.jpeg');"></div>
-                <div class="policy-bio">
-                    <h3>“There is no Planet B.”</h3>
-                    <p>Climate change isn't a distant threat - it's burning through our neighborhoods and flooding our streets today. My plan meets this crisis with the urgency it demands while creating millions of union jobs in clean energy. We'll lead the world in innovation without leaving workers behind. Throughout my careeer, I have supported every bill introduced by my colleagues Ducky Anka and Threes Twos to mitigate our negative environmental impact and move the United States towards a greener future that ensures the long-term stability and longevity of our planet and our environment. As your Senator, I will take several more crucial steps past those perpetuated by Senator Anka and Former President Twos to ensure that we continue the American vision of giving more back to the world than we take and fulfilling the promise of a new tomorrow for <i>all.</i> Here are some of those steps that I plan to take:</p>
-
-                    <h3>Climate Action Now:</h3>
-                    <ul>
-                    <li><b>100% clean electricity by 2035</b> through renewable investments and grid modernization</li>
-                    <li><b>Civilian Climate Corps</b> employing 1.5 million Americans to restore ecosystems</li>
-                    <li><b>Carbon tariff</b> on polluting imports to protect U.S. industry</li>
-                    </ul>
-
-                    <h3>Environmental Justice:</h3>
-                    <ul>
-                    <li><b>Replace every lead pipe</b> in America within 5 years</li>
-                    <li><b>Ban new fossil fuel projects</b> near communities of color</li>
-                    <li><b>Superfund cleanup acceleration</b> with polluter pay requirements</li>
-                    </ul>
-
-                    <h3>Green Industrial Revolution:</h3>
-                    <ul>
-                    <li><b>Union-made</b> requirement for all federal clean energy projects</li>
-                    <li><b>American Battery Initiative</b> to dominate EV supply chains</li>
-                    <li><b>Farmers Conservation Corps</b> paying landowners for carbon sequestration</li>
-                    </ul>
-
-                    <p>This is about creating good-paying jobs and protecting our planet while saving our communities. We'll beat the climate crisis and build the most competitive economy in the world.</p>
-                </div>
-            </div>
-        </div>
-        <div class="policy-item white-bg">
-            <button class="policy-toggle">
-                <span class="policy-title">Transportation & Infrastructure</span>
-                <span class="policy-arrow">&#9662;</span>
-            </button>
-            <div class="policy-content">
-                <div class="policy-image" style="background-image: url('styles/transportationheader.jpg');"></div>
-                <div class="policy-bio">
-                    <h3>“Building bridges to a better tomorrow.”</h3>
-                    <p>America's infrastructure is crumbling while other nations speed ahead. My plan will create millions of union jobs rebuilding our country with smart investments in sustainable transit, resilient systems, and connected communities. In recent years, since 2019 more specifically, the United States has made numerous advancements in infrastructure, much to the benefit of our communities, but there is always room for improvement. Creating connectivity is a hefty project. I was proud to cosponsor Ducky Anka's Transportation Equity and Tolling Reform Act (TETRA) in the Senate, which made it illegal to use highway tolls for anything other than infrastructure improvement, maintenance, and repair. As your Senator, I implement several initiatives to continue to increase our national infrastructure standard, including:</p>
-
-                    <h3>Modernizing America's Backbone:</h3>
-                    <ul>
-                    <li><b>National high-speed regional connector rail network</b> connecting all major metros by 2040, in consultation with President Fields</li>
-                    <li><b>Complete Streets Initiative</b> redesigning 100,000 miles of roads for bikes, buses and pedestrians</li>
-                    <li><b>Electric Vehicle Revolution</b> with 500,000 new charging stations and domestic manufacturing</li>
-                    </ul>
-
-                    <h3>Community-Centered Projects:</h3>
-                    <ul>
-                    <li><b>Neighborhood Infrastructure Grants</b> letting communities prioritize local needs</li>
-                    <li><b>Universal Broadband</b> through municipal fiber and 5G cooperatives</li>
-                    <li><b>Clean Water for All</b> replacing every lead service line in America</li>
-                    </ul>
-
-                    <h3>Workforce & Innovation:</h3>
-                    <ul>
-                    <li><b>Project Labor Agreements</b> required for all federal infrastructure projects</li>
-                    <li><b>Infrastructure Academy</b> training workers for green construction jobs</li>
-                    <li><b>ARPA-Infrastructure</b> funding next-gen materials and smart city tech</li>
-                    </ul>
-
-                    <p>In the Senate, I will work to reimagine how America moves, starting with fixing potholes. From rural broadband to bullet trains, we'll build infrastructure worthy of our people and our future.</p>
-                </div>
-            </div>
-        </div>
-        <div class="policy-item blue-bg">
-            <button class="policy-toggle">
-                <span class="policy-title">Criminal Justice</span>
-                <span class="policy-arrow">&#9662;</span>
-            </button>
-            <div class="policy-content">
-                <div class="policy-image" style="background-image: url('styles/criminaljusticeheader.jpg');"></div>
-                <div class="policy-bio">
-                    <h3>“Justice for all, not just for some.”</h3>
-                    <p>Our justice system should keep communities safe while upholding human dignity. For too long, we’ve confused punishment with justice and incarceration with safety. My plan reforms this broken system—from policing to prisons to reentry—focusing on prevention, fairness, and second chances. I have long advocated for a fairer justice system that achieves its ultimate purpose: Enforcing the law in a reasonable, fair, and just manner. As your Senator, I will work to realize that vision through the following policies:</p>
-
-                    <h3>Police Accountability & Reform:</h3>
-                    <ul>
-                    <li><b>National use-of-force standard</b> banning chokeholds and no-knock warrants</li>
-                    <li><b>Demilitarize police</b> by ending 1033 program transfers of military gear</li>
-                    <li><b>Community Safety Grants</b> to fund mental health responders instead of armed officers for crisis calls</li>
-                    <li><b>Increasing the minimum police training period</b> to ensure that our officers are properly trained and capable of carrying out their jobs</li>
-                    </ul>
-
-                    <h3>Prison & Sentencing Reform:</h3>
-                    <ul>
-                    <li><b>End mandatory minimums</b> for nonviolent offenses</li>
-                    <li><b>Ban private prisons</b> and ICE detention centers</li>
-                    <li><b>Elder parole</b> for aging inmates who pose no public threat</li>
-                    </ul>
-
-                    <h3>Rehabilitation & Reentry:</h3>
-                    <ul>
-                    <li><b>Pell Grant access</b> for incarcerated students</li>
-                    <li><b>Ban the Box</b> for housing and employment nationwide</li>
-                    <li><b>Reentry passports</b> providing ID, job training, and housing assistance</li>
-                    </ul>
-
-                    <h3>Victims' Rights & Prevention:</h3>
-                    <ul>
-                    <li><b>Rape kit backlog elimination</b> with federal funding and tracking</li>
-                    <li><b>Restorative justice programs</b> as alternatives to incarceration</li>
-                    <li><b>Youth diversion programs</b> to break the school-to-prison pipeline</li>
-                    </ul>
-
-                    <p>True justice isn’t about cages—it’s about accountability, healing, and a path forward. We’ll make our system fair, effective, and worthy of a nation founded on second chances.</p>
-                </div>
-            </div>
-        </div>
-        <div class="policy-item white-bg">
-            <button class="policy-toggle">
-                <span class="policy-title">Housing</span>
-                <span class="policy-arrow">&#9662;</span>
-            </button>
-            <div class="policy-content">
-                <div class="policy-image" style="background-image: url('styles/housingheader.webp');"></div>
-                <div class="policy-bio">
-                    <h3>“Home is where opportunity begins.”</h3>
-                    <p>Safe, stable housing is the foundation of strong communities - yet, skyrocketing rents and corporate landlords have pushed millions to the brink. My plan guarantees housing as a human right through bold federal action. Throughout my career, I have consistently stood beside plans to bolster our national infrastructure, and that includes housing. As your Senator, here are some things I will strive for to end the housing crisis and lower housing costs for everyone:</p>
-
-                    <h3>Immediate Relief:</h3>
-                    <ul>
-                    <li><b>National rent stabilization</b> capping annual increases at 3% or inflation (whichever is lower)</li>
-                    <li><b>Emergency tenant protections</b> banning no-cause evictions and unfair fees</li>
-                    <li><b>Direct rental assistance</b> for households spending over 30% of income on housing</li>
-                    </ul>
-
-                    <h3>Build Generational Wealth:</h3>
-                    <ul>
-                    <li><b>First-generation homebuyer grants</b> covering 20% down payments</li>
-                    <li><b>Community land trusts</b> preserving affordability in gentrifying neighborhoods</li>
-                    <li><b>Triple funding</b> for Section 8 vouchers until waitlists are eliminated</li>
-                    </ul>
-
-                    <h3>Crush Speculation:</h3>
-                    <ul>
-                    <li><b>25% tax</b> on corporate home purchases</li>
-                    <li><b>Vacancy penalties</b> for landlords hoarding empty units</li>
-                    <li><b>Public housing construction</b> adding 5 million units by 2035</li>
-                    </ul>
-
-                    <h3>End Homelessness:</h3>
-                    <ul>
-                    <li><b>Housing First</b> guaranteeing shelter with wraparound services</li>
-                    <li><b>Repurpose vacant offices</b> as supportive housing</li>
-                    <li><b>Mental health/addiction treatment</b> integrated into all shelters</li>
-                    </ul>
-
-                    <p><i>"Your zip code shouldn't determine your destiny. We'll make housing affordable for all, not a casino for Wall Street and corrupt landlords."</i></p>
-                </div>
-            </div>
-        </div>
-        <div class="policy-item blue-bg">
-            <button class="policy-toggle">
-                <span class="policy-title">Public Health</span>
-                <span class="policy-arrow">&#9662;</span>
-            </button>
-            <div class="policy-content">
-                <div class="policy-image" style="background-image: url('styles/healthcareheader.jpg');"></div>
-                <div class="policy-bio">
-                    <h3>“A healthy nation is a strong nation.”</h3>
-                    <p>Healthcare is a human right. As the primary sponsor of the <b>Fix the Public Option Act</b>, which established universal coverage, built 500+ public hospitals, and secured our medical supply chain, I’ve proven we can guarantee care for all while cutting costs. Furthermore, I authored and introduced the No Chemicals In American Cosmetics Act, which banned parabens in comestics and sunscreen, and the Treat and Reduce Obesity Act, which sought to coordinate programs to eliminate the obesity epidemic. Now, we’ll finish the job.</p>
-
-                    <h3>My Record & Next Steps:</h3>
-                    <ul>
-                    <li><b>✔️ Delivered the public option</b>: 94% of Americans now covered, with 25% premium rebates for private insurance holders</li>
-                    <li><b>✔️ Nationalized near-insolvent hospitals</b>, saving rural ERs and creating 200K union healthcare jobs</li>
-                    <li><b>✔️ Broke Big Pharma’s monopoly</b> with federal generic drug manufacturing</li>
-                    </ul>
-
-                    <p>As your Senator, I will continue this streak by adhering to the following policies:</p>
-
-                    <p><b>1. Pandemic-Proof America:</b>
-                    <br>• Quadruple stockpiles of PPE, vaccines, and antivirals
-                    <br>• Mandate paid sick leave to stop workplace outbreaks
-                    <br>• Deploy mobile clinics to underserved areas within 72 hours of emergencies</p>
-
-                    <p><b>2. End Healthcare Apartheid:</b>
-                    <br>• Ban medical debt collections and erase existing debt
-                    <br>• Triple funding for mobile clinics in rural/Black/Latino/Native communities
-                    <br>• Jail CEOs of hospitals that violate patient privacy or deny emergency care</p>
-
-                    <p><b>3. Mental Health Revolution:</b>
-                    <br>• Guarantee therapy/counseling under public option with 1-week max wait times
-                    <br>• Open 24/7 crisis centers in every county
-                    <br>• Decriminalize addiction, fund safe-use sites with rehab on demand</p>
-
-                    <p><i>"My law proved universal healthcare works. Now, we’ll make it the best in the world. After all, <i>this is America</i>, and we are second to none."</i></p>
-                </div>
-            </div>
-        <div class="policy-item white-bg">
-            <button class="policy-toggle">
-                <span class="policy-title">Technology</span>
-                <span class="policy-arrow">&#9662;</span>
-            </button>
-            <div class="policy-content">
-                <div class="policy-image" style="background-image: url('styles/technologyheader.jpg');"></div>
-                <div class="policy-bio">
-                    <h3>“Innovation today, prosperity tomorrow.”</h3>
-                    <p>Technology should empower workers, protect privacy, and serve the public good—not just maximize corporate profits. My plan ensures America leads the digital age while breaking monopolies and guaranteeing universal access. I have consistently supported efforts to regulate the rampant rise of Artificial Intelligence and make sure that technology remains human-first and does not begin replacing the benefits of real human interaction and experience. As your Senator, I will continue that streak with policies like:</p>
-
-                    <h3>Digital Rights & Privacy:</h3>
-                    <ul>
-                    <li><b>Ban surveillance advertising</b> and algorithmic discrimination</li>
-                    <li><b>Pass a Digital Bill of Rights</b> guaranteeing data ownership and encryption</li>
-                    <li><b>Break up Big Tech monopolies</b> that crush competition and exploit users</li>
-                    </ul>
-
-                    <h3>Universal Access:</h3>
-                    <ul>
-                    <li><b>Treat broadband as a public utility</b> with $10/month plans for low-income households</li>
-                    <li><b>Municipal fiber optic networks</b> in every community by 2030</li>
-                    <li><b>Device assistance programs</b> providing free laptops/tablets to students and seniors</li>
-                    </ul>
-
-                    <h3>Workplace & Innovation:</h3>
-                    <ul>
-                    <li><b>Public R&D investments</b> in AI safety, green tech, and medical breakthroughs</li>
-                    <li><b>Algorithmic transparency</b> requiring impact assessments for workplace tech</li>
-                    </ul>
-
-                    <h3>21st Century Infrastructure:</h3>
-                    <ul>
-                    <li><b>National cybersecurity corps</b> training workers to protect critical systems</li>
-                    <li><b>Open-source software mandate</b> for all federally funded projects</li>
-                    <li><b>Digital public square</b> creating decentralized social media alternatives</li>
-                    </ul>
-
-                    <p><i>"From AI to broadband, technology must serve humanity, not displace it."</i></p>
-                </div>
-            </div>
-        <!-- Repeat for each subsection, alternating blue-bg and white-bg -->
     </section>
 </main>
 
-        <script>
+<script>
 document.querySelectorAll('.policy-toggle').forEach(btn => {
     btn.addEventListener('click', function() {
         const item = this.closest('.policy-item');
