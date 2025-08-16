@@ -3,28 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Economic Policy | Diana Allar for Pacifica">
-    <meta property="og:description" content="An economy that works from the middle, out—<i>not</i> the top down.">
+    <meta property="og:title" content="Economic Policy | Diana Allar for America">
+    <meta property="og:description" content="An economy that works from the middle, out—not the top down.">
     <meta property="og:image" content="https://dianallar.github.io/senate/styles/pacificawhole.svg">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dianallar.github.io/senate/economic.html">
-    <title>Economic Policy | Diana Allar for Pacifica</title>
+    <title>Economic Policy | Diana Allar for President</title>
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+<style>
+.hero {
+    position: relative;
+    height: 80vh;
+    min-height: 600px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.1;
+    color: #fff;
+}
+
+.hero-tagline {
+    font-size: 2rem;
+    margin-top: 1rem;
+    opacity: 0.9;
+    color: #fff;
+}
+</style>
 <body>
-<div class="coming-soon-overlay">
-    <div class="coming-soon-sticker">Coming Soon</div>
-</div>
     <nav class="navbar">
         <div class="navbar-left">
-            <a href="index.html" class="nav-home">Home</a>
-            <a href="experience.html" class="nav-accomplishments">Accomplishments</a>
-            <a href="domestic.html" class="nav-accomplishments">Domestic Policy</a>
-            <a href="economic.html" class="nav-accomplishments active">Economic Policy</a>
-            <a href="rallies.html" class="nav-accomplishments">Rallies</a>
-            <a href="foreign.html" class="nav-accomplishments">Foreign Policy</a>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="experience.html" class="nav-link">Accomplishments</a>
+            <a href="domestic.html" class="nav-link">Domestic Policy</a>
+            <a href="economic.html" class="nav-link active">Economic Policy</a>
+            <a href="rallies.html" class="nav-link">Rallies</a>
+            <a href="foreign.html" class="nav-link">Foreign Policy</a>
         </div>
         <div class="navbar-right">
             <form class="nav-search">
@@ -33,423 +90,175 @@
         </div>
     </nav>
 
-            <header class="hero" style="background: url('styles/economyheader.jpeg') center/cover no-repeat;">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <img src="styles/pacificawhole.svg" alt="Pacifica Map" class="hero-svg">
-                <div class="hero-text">
-                    <h1>Economic Policy</h1>
-                    <p class="hero-tagline">An economy that works from the middle, out—<i>not</i> the top down.</p>
+    <header class="hero" style="background: url('styles/economyheader.jpeg') center/cover no-repeat;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1><b>Economic Policy</b></h1>
+                <p class="hero-tagline">An economy that works from the middle, out—<i>not</i> the top down.</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+    <section class="issues-section">
+        <div class="container">
+            <h2>Economic Policy Platform</h2>
+            <div class="issues-grid">
+
+                <div class="issue-card">
+                    <h3>1. Windfall Tax</h3>
+                    <p>It's time to ensure that money isn't being taken right out of your wallet and hoarded by fat cats. Allar will tax corporations for extraordinary, exploitation- or crisis-driven profits and redistribute revenues to fund direct relief for families, public investments, and price-stabilizing programs, particularly in essential industries. This policy targets sectors that unfairly profited from emergency conditions, ensures money is returned to the public, and finances affordability measures like rental assistance, rebates on essential goods, and investments in domestic manufacturing.</p>
                 </div>
-            </div>  
-        </header>
-        
-        <main class="domestic-main">
-<section class="policy-accordion">
-    <div class="policy-item blue-bg">
-        <button class="policy-toggle">
-            <span class="policy-title">Lowering Inflation & Disinflationary Fiscal Measures</span>
-            <span class="policy-arrow">&#9662;</span>
-        </button>
-        <div class="policy-content">
-            <div class="policy-image" style="background-image: url('styles/inflation.jpg');"></div>
-            <div class="policy-bio policy-bio-with-charts">
-                <div class="policy-bio-text">
-                    <h3>Cutting Costs for Working Families by Curbing Excessive Spending and Greed.</h3>
-                    <p>We'll fight inflation at its root—corporate profiteering and supply chain failures—using every tool of government to lower prices while protecting workers and families. The fact of the matter is this: The government keeps spending money it does not have, weakening the purchasing power of the US Dollar. Year on Year inflation is approaching 10% (graph 2) and it's actively harming the American consumer. As your Senator, I will work to combat inflation through the following measures:</p>
-
-                    <h3>1. Windfall Profit Redistribution</h3>
-                    <ul>
-                    <li><b>50% Excess Profits Tax</b> on corporations in healthcare, energy, and housing when margins exceed 150% of historic averages</li>
-                    <li><b>Revenue Directly Funds:</b>
-                        <ul>
-                        <li>Public Option premium subsidies</li>
-                        <li>Construction of 500,000 affordable housing units annually</li>
-                        <li>Monthly $200 "Price Relief Cards" for essentials</li>
-                        </ul>
-                    </li>
-                    </ul>
-
-                    <h3>2. Strategic Supply Buffers</h3>
-                    <ul>
-                    <li><b>National Stockpiles</b> of:
-                        <ul>
-                        <li>Generic drugs (leveraging our public pharmaceutical factories)</li>
-                        <li>Building materials (lumber, cement, steel)</li>
-                        <li>Staple foods (formula, grains, cooking oil)</li>
-                        </ul>
-                    </li>
-                    <li><b>Automatic Releases</b> when prices spike >10% above normal</li>
-                    </ul>
-
-                    <h3>3. Anti-Gouging Enforcement</h3>
-                    <ul>
-                    <li><b>Corporate Price Audits:</b> FTC subpoena power for corporate books</li>
-                    <li><b>500% Penalties</b> on illicit price hikes (matching our healthcare law sanctions)</li>
-                    <li><b>Mandatory Rollbacks</b> for unjustified increases in healthcare/utilities</li>
-                    </ul>
-
-                    <h3>4. Public Competition</h3>
-                    <ul>
-                    <li><b>Medicare Manufacturing</b> of 200+ generic drugs (already authorized)</li>
-                    <li><b>FedRent Program</b> offering lease-to-own homes at 30% below market</li>
-                    <li><b>Postal Banking</b> with 0% emergency loans when inflation exceeds 5%</li>
-                    </ul>
-
-                    <h3>5. Automatic Stabilizers</h3>
-                    <ul>
-                    <li><b>Sales Tax Holidays</b> triggered when inflation exceeds 4% for 3 months</li>
-                    <li><b>Corporate Rebate Clawbacks</b> for federal contractors who raise prices faster than wages</li>
-                    </ul>
-
-                    <p><i>"Inflation is a policy choice—we choose to side with workers over Wall Street."</i></p>
+    
+                <div class="issue-card">
+                    <h3>2. Strategic Mineral Reserve Act</h3>
+                    <p>Create national stockpiles of critical minerals and raw materials—lithium, cobalt, rare earths—to reduce supply-chain vulnerabilities from government-sanctioned space mining, secure clean-energy supply chains, and support strategic domestic manufacturing. The Reserve would be managed to stabilize prices, coordinate with allies, and incentivize sustainable domestic space mining and recycling. Space mining is a very sensitive and inflationary industry, we must ensure its protection from vulnerabilities.</p>
                 </div>
-                <div class="policy-charts">
-                    <img src="styles/inflation-mom.png" alt="Inflation Month on Month Chart">
-                    <img src="styles/inflation-yoy.png" alt="Inflation Year on Year Chart">
+    
+                <div class="issue-card">
+                    <h3>3. Requiring compliance with sectoral bargaining in federal contracts</h3>
+                    <p>Require companies that win federal contracts to comply with industry-level bargaining agreements or to recognize multi-employer collective bargaining frameworks, ensuring federal dollars support higher standards, predictable wages, and industry-wide protections rather than a race to the bottom.</p>
                 </div>
-            </div>
-            
-        </div>
-    </div>
-
-    <div class="policy-item white-bg">
-        <button class="policy-toggle">
-            <span class="policy-title">Worker Power & Wage Growth (Non-Inflationary)</span>
-            <span class="policy-arrow">&#9662;</span>
-        </button>
-        <div class="policy-content">
-            <div class="policy-image" style="background-image: url('styles/workerpower.webp');"></div>
-            <div class="policy-bio">
-                <h3>“When workers thrive, the economy thrives.”</h3>
-            <p>Real wage gains shouldn't fuel price spirals. We'll rebalance power toward workers through structural reforms that increase pay sustainably. I have routinely fought for sustainable wage increases, namely when I increased the minimum wage for educators in the state of Olympia and ensured that teaching could remain an equitable profession, creating numerous jobs and ending the teacher shortage in Olympia. As your Senator, I will take the following steps to promote worker power and wage growth:</p>
-
-            <h3>1. Sectoral Bargaining</h3>
-            <ul>
-            <li><b>Industry-Wide Wage Boards</b> setting minimum pay/benefits by sector (starting with healthcare, retail, and logistics)</li>
-            <li><b>Multi-Employer Unions</b> allowing workers at small businesses to bargain collectively</li>
-            <li><b>Productivity-Linked Raises</b> requiring profit growth to outpace executive pay</li>
-            </ul>
-
-            <h3>2. Public Option for Good Jobs</h3>
-            <ul>
-            <li><b>Federal Job Guarantee</b> at $25/hr + benefits in caregiving, infrastructure, and climate resilience</li>
-            <li><b>Union Hiring Halls</b> prioritizing workers displaced by automation/transition</li>
-            <li><b>Worker Ownership Fund</b> financing employee buyouts of failing firms</li>
-            </ul>
-
-            <h3>3. Wage-Price Firewall</h3>
-            <ul>
-            <li><b>Excess Profit Recapture</b> taxing corporations that raise prices faster than wages</li>
-            <li><b>CEO Pay Ratio Cap</b> of 50:1 for federal contractors (vs current 320:1 average)</li>
-            <li><b>Right to Own Your Data</b> guaranteeing workers a share of AI/automation profits</li>
-            </ul>
-
-            <h3>4. Enforcement Revolution</h3>
-            <ul>
-            <li><b>Triple NLRB Funding</b> to process unfair labor practice claims in <30 days</li>
-            <li><b>Corporate Death Penalty</b> revoking charters of repeat wage-theft violators</li>
-            <li><b>Global Labor Standards</b> banning imports from union-busting firms</li>
-            </ul>
-
-            <p><i>"When workers have power, the economy works for everyone—without price spikes."</i></p>
-            </div>
-        </div>
-    </div>
-
-    <div class="policy-item blue-bg">
-        <button class="policy-toggle">
-            <span class="policy-title">Supply-Side Expansion</span>
-            <span class="policy-arrow">&#9662;</span>
-        </button>
-        <div class="policy-content">
-            <div class="policy-image" style="background-image: url('styles/supplyside.webp');"></div>
-            <div class="policy-bio">
-                <h3>“Build more, bottleneck less.”</h3>
-                <p>Real price stability comes from increasing supply—not crushing demand. We'll break corporate monopolies, rebuild domestic capacity, and cut dependence on fragile global chains. Here are some things we can do to accomplish that:</p>
-
-                <h3>1. Public Production for Critical Goods</h3>
-                <ul>
-                <li><b>Medicare Manufacturing 2.0</b>:
-                    <ul>
-                    <li>Double generic drug output using <i>Fix The Public Option Act</i> facilities</li>
-                    <li>Produce 50+ active pharmaceutical ingredients domestically by 2026</li>
-                    </ul>
-                </li>
-                <li><b>National Infrastructure Labs</b>:
-                    <ul>
-                    <li>Develop low-cost modular construction tech</li>
-                    <li>Mass-produce climate-resilient building materials</li>
-                    </ul>
-                </li>
-                </ul>
-
-                <h3>2. Permitting Revolution</h3>
-                <ul>
-                <li><b>90-Day Guarantee</b> for clean energy/transit projects</li>
-                <li><b>Community Benefit Agreements</b> fast-tracking projects that:
-                    <ul>
-                    <li>Pay union wages</li>
-                    <li>Include local hiring</li>
-                    <li>Meet climate standards</li>
-                    </ul>
-                </li>
-                </ul>
-
-                <h3>3. Competitive Markets</h3>
-                <ul>
-                <li><b>Break Up "Zombie" Monopolies</b>:
-                    <ul>
-                    <li>Force divestment of idle patents/real estate</li>
-                    <li>Ban vertical integration in food/healthcare</li>
-                    </ul>
-                </li>
-                <li><b>Open-Source Industrial Policy</b>:
-                    <ul>
-                    <li>Publicly license federally funded R&D</li>
-                    <li>Launch 10 "Manufacturing Extension Hubs"</li>
-                    </ul>
-                </li>
-                </ul>
-
-                <h3>4. Resilient Logistics</h3>
-                <ul>
-                <li><b>National Shipping Reform</b>:
-                    <ul>
-                    <li>Price caps on container freight</li>
-                    <li>Public port modernization</li>
-                    </ul>
-                </li>
-                <li><b>Strategic Farm Capacity</b>:
-                    <ul>
-                    <li>Revive agricultural cooperatives</li>
-                    <li>Stockpile key fertilizers/seeds</li>
-                    </ul>
-                </li>
-                </ul>
-
-                <p>Shortages shall become obsolete through public investment, not corporate handouts.</p>
-                <div class="policy-charts">
-                    <img src="styles/supplysideinfo.png" alt="Supply-Side Expansion Info">
+    
+                <div class="issue-card">
+                    <h3>4. Hiring halls for displaced workers in states with high unemployment</h3>
+                    <p>Establish union-coordinated hiring halls and placement centers in regions hit hard by layoffs, giving displaced workers rapid access to reemployment, apprenticeship placements, retraining programs, and wraparound support to ease transitions between jobs.</p>
                 </div>
+    
+                <div class="issue-card">
+                    <h3>5. Excess profit recapture (Taxing corporations that raise prices faster than wages)</h3>
+                    <p>Introduce a tax on firms whose price increases outpace national wage growth, discouraging opportunistic price hikes and recapturing excess income to fund consumer relief, enforcement resources, and worker-support programs.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>6. CEO Pay Ratio Cap of 50:1 for federal contractors and subcontractors</h3>
+                    <p>Cap the pay ratio between CEOs and median workers at 50:1 for firms receiving federal dollars, aligning executive compensation with worker pay, discouraging excessive executive pay funded by public contracts, and promoting wage growth across firms serving taxpayers.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>7. Triple NLRB Funding</h3>
+                    <p>Provide the National Labor Relations Board with significantly expanded funding to speed investigations, modernize enforcement technology, and reduce case backlogs—so unfair labor practices are addressed rapidly and workers can organize without prolonged delay.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>8. Corporate death penalty for repeat wage-theft violators</h3>
+                    <p>Empower regulators to revoke corporate charters or strip firms of business licenses after repeated, egregious wage-theft offenses, removing repeat offenders from the market and converting abandoned assets to worker-run or community-owned enterprises.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>9. Expand monopoly threshold</h3>
+                    <p>Tighten antitrust thresholds and update merger review standards to cover modern market realities—platform concentration, common ownership, and data-control—so regulators can block mergers that substantially reduce competition before harm occurs.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>10. Harsher penalties for companies that exploit people abroad for product manufacturing</h3>
+                    <p>Increase sanctions, import bans, and criminal penalties for firms complicit in forced labor, child labor, or severe rights abuses abroad; require supply-chain audits and public disclosure so consumers and enforcement agencies can hold violators accountable.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>11. Produce 50+ Active pharmaceutical ingredients domestically by 2058</h3>
+                    <p>Launch a long-term industrial policy to reshore essential pharmaceutical production, invest in public and private manufacturing capacity, and guarantee domestic production of at least 50 key active pharmaceutical ingredients to secure medicine supplies and lower drug shortages.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>12. Force divestment of idle patents and real estate</h3>
+                    <p>Require firms that hoard patents or leave valuable real estate idle to either commercialize, license, sell, or forfeit those assets—freeing innovation bottlenecks, lowering barriers to competition, and unlocking land for housing and productive use.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>13. Ban vertical integration in food and healthcare</h3>
+                    <p>Diana Allar will forbid dominant firms from owning multiple levels of the supply chain in critical sectors like food and healthcare—separating production, distribution, and retail—to prevent price extraction, conflicts of interest, and market foreclosure.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>14. CEOs may be held personally liable for wage theft</h3>
+                    <p>Diana Allar will allow civil and, for severe willful abuses, criminal liability for executives who knowingly enable or conceal systemic wage theft—creating stronger deterrents and ensuring accountability reaches decision-makers, not just corporate shells.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>15. Mandate return of bonuses when firms raise prices >2x inflation rate</h3>
+                    <p>An Allar Administration will require executive bonus clawbacks when companies knowingly raise prices at rates substantially above general inflation without justified cost drivers; recovered funds would be redistributed to affected consumers and workers.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>16. Increase the Land Value Tax</h3>
+                    <p>An Allar Administration will implement a progressive land value tax to capture economic rents from landowners, incentivize productive use of land, and generate revenue for public goods, addressing wealth inequality and funding essential services.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>17. Criminal penalties for algorithmic price-fixing</h3>
+                    <p>Make it a crime to deploy algorithms, collusive pricing bots, or coordinated machine-learning systems that automate price-fixing or tacit collusion across competitors, with penalties for firms and responsible managers.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>18. Expand AmeriCare Act model to housing (FedHomes) and utilities</h3>
+                    <p>Extend the public-option model to essential services by creating FedHomes as a public housing option and regulated public utilities that provide affordable, transparent rates—leveraging scale to lower costs and guarantee basic services for all.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>19. Mandate public cost breakdowns for essential goods</h3>
+                    <p>Require sellers of essential goods to publish standardized cost breakdowns—materials, labor, distribution, and margin—so policymakers, regulators, and consumers can see where prices come from and spot unjustified markups.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>20. 25% bounty on recovered price-fixing fines</h3>
+                    <p>Offer whistleblowers and cooperating state/federal attorneys a 25% bounty on fines recovered from price-fixing cases to incentivize tip-offs, speed enforcement, and increase the resources available for antitrust investigations.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>21. Limit student debt payments to 5% of disposable income</h3>
+                    <p>Legislate a permanent cap that limits monthly student loan payments to 5% of disposable income to make repayment affordable, reduce defaults, and stabilize household balance sheets—paired with income-driven adjustments for hardship.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>22. Forgiveness after 10 years of student debt payments (5 years for public service)</h3>
+                    <p>Guarantee widespread loan forgiveness after 10 years of compliant payments, and accelerate forgiveness to 5 years for public-service careers—rewarding socially valuable work and lowering long-term burdens.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>23. National 15% interest rate cap</h3>
+                    <p>Establish a uniform usury cap of 15% APR on consumer credit products nationwide to protect borrowers from predatory rates while preserving access to responsible lending and encouraging lower-cost public alternatives.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>24. Ban junk fees on mortgages/rental applications</h3>
+                    <p>Prohibit hidden and excessive application fees in housing finance and rental markets, requiring transparent, reasonable charges only; this reduces housing access barriers and prevents exploitative gatekeeping costs.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>25. 3% emergency loans during inflationary spikes</h3>
+                    <p>Provide emergency, low-cost 3% loans through public banking channels during defined inflation spikes to help households bridge short-term price pressures without resorting to high-interest payday alternatives.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>26. Federal protection for workers withholding payments from fraudulent creditors</h3>
+                    <p>Protect workers who withhold payments from creditors or collectors engaged in clear fraud or illegal activity—shielding them from retaliation and creating legal pathways to contest abusive claims.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>27. Class-action leverage against abusive lenders</h3>
+                    <p>Strengthen class-action tools, statutory damages, and collective enforcement mechanisms so communities can efficiently pursue redress against predatory lenders and share recovered relief across harmed borrowers.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>28. Targeted Investment in regions hit by plant closures or industry decline</h3>
+                    <p>Deploy focused capital, tax credits, and procurement guarantees to communities facing mass closures—finance new industries, infrastructure, and workforce programs that rebuild local economies sustainably.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>29. Public Works Surge, to create jobs working on government projects such as infrastructure advancement and health care (See: Domestic Policies)</h3>
+                    <p>Kick off a rapid, large-scale public works program prioritizing infrastructure, care economy expansion, and healthcare facility improvements—creating millions of jobs, rebuilding public assets, and accelerating community-level renewal.</p>
+                </div>
+    
+                <div class="issue-card">
+                    <h3>30. Sales Tax Holidays automatically triggered when inflation exceeds 4% for 3 months</h3>
+                    <p>Implement automatic temporary sales-tax suspensions on basic goods triggered by sustained inflation to provide immediate consumer relief, especially for low-income households, until price stability returns.</p>
+                </div>
+    
             </div>
         </div>
-    </div>
-
-    <div class="policy-item white-bg">
-        <button class="policy-toggle">
-            <span class="policy-title">Corporate Accountability</span>
-            <span class="policy-arrow">&#9662;</span>
-        </button>
-        <div class="policy-content">
-            <div class="policy-image" style="background-image: url('styles/corporateaccountability.jpg');"></div>
-            <div class="policy-bio">
-                <h3>“Hold the powerful to account.”</h3>
-                <p>We'll dismantle the corporate price-setting power that drives inflation, with surgical reforms to punish profiteering and rebalance our economy. I have long stood in the way of corporate greed and overreach, through measures that I signed into law as President to ensure market competition and by attempting to dismantle the anonymous organization of Political Action Committees and expose where the money goes and just which big companies are funding elections. As your Senator, I will continue to combat the constant assault on our economy by corporate overlords, via these methods:</p>
-
-                <h3>1. Profit & Price Controls</h3>
-                <ul>
-                <li><b>Windfall Profit Caps</b>:
-                    <ul>
-                    <li>Automatic 75% tax on corporate profits exceeding 10% margin in essential sectors (healthcare, housing, utilities)</li>
-                    <li>Revenue funds direct consumer rebates</li>
-                    </ul>
-                </li>
-                <li><b>CEO Clawbacks</b>:
-                    <ul>
-                    <li>Mandate return of bonuses when firms raise prices >2x inflation rate</li>
-                    <li>Personal liability for wage theft</li>
-                    </ul>
-                </li>
-                </ul>
-
-                <h3>2. Market Structure Reform</h3>
-                <ul>
-                <li><b>Break Up Shadow Cartels</b>:
-                    <ul>
-                    <li>Ban common ownership of competitors (e.g., BlackRock owning rival airlines)</li>
-                    <li>Criminal penalties for algorithmic price-fixing</li>
-                    </ul>
-                </li>
-                <li><b>Public Competitors</b>:
-                    <ul>
-                    <li>Expand <i>Public Option Act</i> model to housing (FedHomes) and utilities</li>
-                    <li>Undercut private sector price gouging</li>
-                    </ul>
-                </li>
-                </ul>
-
-                <h3>3. Transparency & Enforcement</h3>
-                <ul>
-                <li><b>Real-Time Price Audits</b>:
-                    <ul>
-                    <li>Mandate public cost breakdowns for essential goods</li>
-                    <li>FTC "SWAT teams" for surprise inspections</li>
-                    </ul>
-                </li>
-                <li><b>Whistleblower Armies</b>:
-                    <ul>
-                    <li>25% bounty on recovered price-fixing fines</li>
-                    <li>Protection + relocation for corporate whistleblowers</li>
-                    </ul>
-                </li>
-                </ul>
-
-                <h3>4. Structural Consequences</h3>
-                <ul>
-                <li><b>Three Strikes Law</b>:
-                    <ul>
-                    <li>Revoke corporate charters after repeated violations</li>
-                    <li>Convert abandoned assets to worker cooperatives</li>
-                    </ul>
-                </li>
-                <li><b>Investor Accountability</b>:
-                    <ul>
-                    <li>Pierce the corporate veil for institutional shareholders</li>
-                    <li>Ban stock buybacks for firms raising prices > inflation</li>
-                    </ul>
-                </li>
-                </ul>
-
-                <p>If corporations won't serve the public, I'll replace them with institutions that do.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="policy-item blue-bg">
-        <button class="policy-toggle">
-            <span class="policy-title">Debt Relief & Stability</span>
-            <span class="policy-arrow">&#9662;</span>
-        </button>
-        <div class="policy-content">
-            <div class="policy-image" style="background-image: url('styles/debt.jpg');"></div>
-            <div class="policy-bio">
-                <h3>“A fair shot, not a lifetime of debt.”</h3>
-                <p>Crushing household debt fuels inflation by forcing families to borrow more just to survive. As your Senator, I will cancel predatory debts and rebuild economic security through public alternatives. Here is my plan for lowering Pacificans' personal debts:</p>
-
-                <h3>1. Medical Debt Revolution</h3>
-                <ul>
-                <li><b>Total Erasure</b>:
-                    <ul>
-                    <li>Cancel all $220B in outstanding medical debt using <i>Public Option Act</i> authority</li>
-                    <li>Ban medical debt collections and credit reporting permanently</li>
-                    </ul>
-                </li>
-                <li><b>Prevention</b>:
-                    <ul>
-                    <li>Cap out-of-pocket costs at $500/year under public option</li>
-                    <li>Automatic enrollment in zero-interest payment plans</li>
-                    </ul>
-                </li>
-                </ul>
-
-                <h3>2. Student Debt Overhaul</h3>
-                <ul>
-                <li><b>Borrower's Bill of Rights</b>:
-                    <ul>
-                    <li>Limit payments to 5% of disposable income</li>
-                    <li>Forgiveness after 10 years of payments (5 years for public service)</li>
-                    </ul>
-                </li>
-                <li><b>Public University Compact</b>:
-                    <ul>
-                    <li>Federal takeover of student lending</li>
-                    <li>0% interest for graduates working in high-need fields</li>
-                    </ul>
-                </li>
-                </ul>
-
-                <h3>3. Housing Debt Justice</h3>
-                <ul>
-                <li><b>Foreclosure Moratorium</b>:
-                    <ul>
-                    <li>5-year pause on evictions for medically/financially distressed households</li>
-                    <li>Right-to-rent conversions for foreclosed properties</li>
-                    </ul>
-                </li>
-                <li><b>Usury Limits</b>:
-                    <ul>
-                    <li>National 15% interest rate cap</li>
-                    <li>Ban junk fees on mortgages/rental applications</li>
-                    </ul>
-                </li>
-                </ul>
-
-                <h3>4. Public Safety Nets</h3>
-                <ul>
-                <li><b>Postal Banking</b>:
-                    <ul>
-                    <li>3% emergency loans during inflationary spikes</li>
-                    <li>Check cashing/payday loan alternatives</li>
-                    </ul>
-                </li>
-                <li><b>Debt Strike Insurance</b>:
-                    <ul>
-                    <li>Federal protection for workers withholding payments from fraudulent creditors</li>
-                    <li>Class-action leverage against abusive lenders</li>
-                    </ul>
-                </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="policy-item white-bg">
-        <button class="policy-toggle">
-            <span class="policy-title">Transitional Safeguards</span>
-            <span class="policy-arrow">&#9662;</span>
-        </button>
-        <div class="policy-content">
-            <div class="policy-image" style="background-image: url('styles/transitionalsafeguards.jpg');"></div>
-            <div class="policy-bio">
-                <h3>“No one left behind in a changing economy.”</h3>
-                <p>Rapid economic change can leave too many behind—whether from automation, globalization, or climate transition. As your Senator, I’ll ensure every Pacifican has a bridge to new opportunity, not a trapdoor to poverty. We’ll protect workers, families, and communities through every transition with these safeguards:</p>
-
-                <h3>1. Guaranteed Retraining & Reemployment</h3>
-                <ul>
-                    <li><b>Universal Retraining Grants</b> for workers displaced by automation, offshoring, or industry shifts</li>
-                    <li><b>Job Placement Guarantees</b>—no one left without a path to new work</li>
-                    <li><b>Paid Transition Periods</b> with full wage replacement for up to 12 months</li>
-                </ul>
-
-                <h3>2. Community Resilience Funds</h3>
-                <ul>
-                    <li><b>Targeted Investment</b> in regions hit by plant closures or industry decline</li>
-                    <li><b>Local Economic Diversification</b> grants for new businesses and green jobs</li>
-                    <li><b>Public Works Surge</b> to create jobs rebuilding infrastructure and climate resilience</li>
-                </ul>
-
-                <h3>3. Safety Net Expansion</h3>
-                <ul>
-                    <li><b>Automatic Unemployment Extensions</b> during mass layoffs or recessions</li>
-                    <li><b>Portable Benefits</b>—healthcare, retirement, and paid leave that follow you to any job</li>
-                    <li><b>Emergency Housing & Food Assistance</b> for families in transition</li>
-                </ul>
-
-                <h3>4. Worker Voice in Transition</h3>
-                <ul>
-                    <li><b>Worker Transition Councils</b> at every major employer to plan and negotiate fair transitions</li>
-                    <li><b>Advance Notice & Consultation</b> before layoffs, closures, or automation</li>
-                    <li><b>Right to Buy</b>—workers get first chance to purchase and run facilities facing closure</li>
-                </ul>
-
-                <p><i>Change is inevitable—but hardship is not. Together, we'll ensure a just transition that uplifts everyone.</i></p>
-            </div>
-        </div>
-    </div>
-</section>
-<script>
-document.querySelectorAll('.policy-toggle').forEach(btn => {
-    btn.addEventListener('click', function() {
-        const item = this.closest('.policy-item');
-        // Close all others
-        document.querySelectorAll('.policy-item').forEach(i => {
-            if(i !== item) i.classList.remove('active');
-        });
-        // Toggle this one
-        item.classList.toggle('active');
-    });
-});
-</script>
+    </section>
+    </main>
 </body>
 </html>
